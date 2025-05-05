@@ -1,5 +1,8 @@
 # 🧠 Multimodal RAG (Retrieval-Augmented Generation) App
 
+## Test commit to verify author change
+
+
 This is a full-stack **Multimodal RAG** (Retrieval-Augmented Generation) application built using:
 
 - ⚙️ **FastAPI** (Python) for the backend
