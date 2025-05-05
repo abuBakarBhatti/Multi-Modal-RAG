@@ -1,23 +1,38 @@
 # 🧠 Multimodal RAG (Retrieval-Augmented Generation) App
 
-## Test commit to verify author change
+This is a full-stack **Multimodal Retrieval-Augmented Generation (RAG)** application built with modern tooling and powered by **state-of-the-art multimodal LLMs**.
 
+It enables **contextual question answering** and **interactive document exploration**.
 
-This is a full-stack **Multimodal RAG** (Retrieval-Augmented Generation) application built using:
+---
 
-- ⚙️ **FastAPI** (Python) for the backend
-- ⚛️ **React (TypeScript)** for the frontend
-- 🤖 **Multimodal LLMs** (like LLaMA 4 Maverick via Together API or custom local models via Ollama)
+## 💡 Problem It Solves
 
-The app enables advanced question answering and document interaction using **multimodal large language models**.
+In real-world scenarios, information is often scattered across unstructured documents (PDFs, Word files, images with text, etc.). This application aims to solve:
+
+- ✅ Extracting meaningful context from **unstructured documents**
+- ✅ Enabling natural-language **question answering** over documents
+- ✅ Combining **pdfs containing images** for richer understanding
+
+---
+
+## 🧰 Tech Stack & Key Libraries
+
+| Layer         | Technology Used |
+|---------------|-----------------|
+| **Backend**   | [FastAPI](https://fastapi.tiangolo.com/) (Python) |
+| **Frontend**  | [React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/) |
+| **LLM**       | [LLaMA 4 Maverick](https://platform.together.xyz/) via Together API (or local models via Ollama) |
+| **Parsing**   | [Unstructured.io](https://github.com/Unstructured-IO/unstructured) for intelligent document parsing |
+| **RAG Logic** | [LangChain](https://www.langchain.com/) for orchestration |
+| **Image Support** | Vision-capable LLMs with multimodal context ingestion |
 
 ---
 
 ## 🚀 Project Structure
 
 ```bash
-your-project/
-│
+multimodal-rag/
 ├── backend/               # FastAPI backend
 │   ├── main.py
 │   ├── requirements.txt
@@ -28,24 +43,28 @@ your-project/
 │   └── ...
 │
 └── README.md              # You're reading it!
-
+```
 
 🛠️ Getting Started
 1. Backend Setup (FastAPI)
 🔹 Step 1: Create and activate a virtual environment
 
+```bash
 cd backend
 python -m venv venv
 source venv/bin/activate  
 #Windows:venv\Scripts\activate
-
+```
 🔹 Step 2: Install dependencies
-pip install -r requirements.txt
+```bash 
+pip install -r requirements.txt 
+```
 
 🔹 Step 3: Set your API key
+```bash
 Create a .env file inside the backend directory:
 
-```TOGETHER_API_KEY=your_api_key_here
+TOGETHER_API_KEY=your_api_key_here
 ```
 
 You can replace the Together API provider with your own LLM provider in main.py, or use a local model via Ollama if preferred.
@@ -56,16 +75,20 @@ The default LLM used is:
 ⚠️ Ensure your chosen model supports multimodal input.
 
 🔹 Step 4: Run the FastAPI server
-    uvicorn main:app --reload
+```bash
 
+    uvicorn main:app --reload
+```
 
 
 2. Frontend Setup (React with TypeScript)
+```bash
 cd frontend
 npm install
 npm run dev
 
 This will start the frontend development server.
+```
 
 
 🧪 Features
